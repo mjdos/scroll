@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,7 +14,8 @@ class ProductController extends Controller
 
     public function nft()
     {
-        return view('painel.produtos.index');
+        $users = User::all();
+        return view('painel.produtos.index',compact('users'));
     }
 
     public function show(Request $request)

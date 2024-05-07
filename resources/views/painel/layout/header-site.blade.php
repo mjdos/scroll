@@ -44,8 +44,12 @@
         <nav class="border-bottom nav-ds smart-sticky">
             <div class="navigation-wrapper container flex-space-between align-items-center">
                 <div class="nav-left-hand-part">
-                    <img src="{{ url('assets/img/logo-pequeno.png') }}" alt="logo" height="120" style="margin-right: 60px;">
-
+                    <div class="logo">
+                        <a class="logo-link" href="{{-- route('site.index') --}}">
+                            <div class="logo-img"><img src="{{ url('assets/img/logo.png') }}" alt="logo"></div>
+                            <div class="logo-text">CriptoMeta</div>
+                        </a>
+                    </div>
                     <!--  navigation menu -->
                     <ul class="navigation-menu">
                         <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Home</a></li>
