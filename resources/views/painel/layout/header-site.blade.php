@@ -103,7 +103,7 @@
                                             </a>
                                         </li>
                                         <li class="logout">
-                                            <a href="#">
+                                            <a href="{{ route('logout_site')}}">
                                                 <svg class="crumina-icon">
                                                     <use xlink:href="#logout-icon"></use>
                                                 </svg>Logout

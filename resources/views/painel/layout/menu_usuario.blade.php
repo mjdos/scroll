@@ -13,24 +13,27 @@
             <div class="user-db-body">
                 <ul class="profile-menu">
              
-                    <li><a href="{{route('usuario.index')}}"><svg class="crumina-icon">
+                    <li>
+                        <a href="{{route('usuario.index')}}">
+                            <svg class="crumina-icon">
                                 <use xlink:href="#user-icon"></use>
-                            </svg>Perfil</a></li>
-                    <li><a href="{{route('projeto.criar')}}"><svg class="crumina-icon">
+                            </svg>Perfil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('nft.criar')}}">
+                            <svg class="crumina-icon">
                                 <use xlink:href="#picture-icon"></use>
-                            </svg>Criar Projeto</a></li>
-                    <li><a href="{{route('usuario.projetos')}}"><svg class="crumina-icon">
-                                <use xlink:href="#dashboard-icon"></use>
-                            </svg>Meus Projetos</a></li>
-                    <li><a href="#"><svg class="crumina-icon">
-                                <use xlink:href="#dollar-icon"></use>
-                            </svg>Meus Investimentos</a></li>
-                    <li><a href="{{ route('usuario.carteira') }}"><svg class="crumina-icon">
-                                <use xlink:href="#wallet-icon"></use>
-                            </svg>Minha Carteira</a></li>
-                    <li class="logout"><a href="{{route('gestao_logout')}}"><svg class="crumina-icon">
+                            </svg>Criar Projeto
+                        </a>
+                    </li>
+                    <li class="logout">
+                        <a href="{{route('logout_site')}}">
+                            <svg class="crumina-icon">
                                 <use xlink:href="#logout-icon"></use>
-                            </svg>Sair</a></li>
+                            </svg>Logout
+                        </a>
+                    </li>
 
                 </ul>
             </div>

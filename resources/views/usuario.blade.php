@@ -1,4 +1,4 @@
-@include('site.layouts.header')
+@include('painel.layout.header-site')
 @php
     $usuario = Session::get('usuario');
 @endphp
@@ -48,4 +48,4 @@
 
 </div>
 <!-- main content area -->
-@include('site.layouts.footer')
+@include('painel.layout.footer-site')
