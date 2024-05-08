@@ -35,7 +35,7 @@
         <!-- mobile navigation panel -->
         <div class="mobile-nav-panel">
             <div class="mobile-nav-header">
-                <div class="mobile-menu-logo logo"><a href="{{route('site.index')}}"><img src="svg/logo-ds.svg" alt="logo"></a>
+                <div class="mobile-menu-logo logo"><a href="#"><img src="svg/logo-ds.svg" alt="logo"></a>
                 </div>
                 <svg class="crumina-icon close-icon">
                     <use xlink:href="#cross-icon"></use>
@@ -44,9 +44,9 @@
             <div class="mobile-menu-wrapper">
                 <!-- mobile menu -->
                 <ul class="mobile-menu">
-                    <li class="menu-item"><a class="menu-link" href="{{route('site.index')}}">Inicial</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Inicial</a></li>
                         <ul class="submenu">
-                            <li class="menu-item"><a class="menu-link" href="{{route('projeto.explorar')}}">Projetos</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Projetos</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -67,7 +67,7 @@
                     <!-- mobile panel burger icon -->
                     <!-- header logo -->
                     <div class="logo">
-                        <a class="logo-link" href="{{ route('site.index') }}">
+                        <a class="logo-link" href="#">
                             <div class="logo-img"><img src="{{ url('img/logo.png') }}" alt="logo"></div>
                             <div class="logo-text">CriptoMeta</div>
                         </a>
@@ -75,15 +75,15 @@
                     <!-- header logo -->
                     <!--  navigation menu -->
                     <ul class="navigation-menu">
-                        <li class="menu-item"><a class="menu-link" href="{{route('site.index')}}">Inicial</a></li>
-                        <li class="menu-item menu-item-has-children"><a class="menu-link" href="{{route('quemsomos')}}">Quem Somos</a></li>
-                        <li class="menu-item"><a class="menu-link" href="{{route('projeto.explorar')}}">Projetos</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Inicial</a></li>
+                        <li class="menu-item menu-item-has-children"><a class="menu-link" href="#">Quem Somos</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Projetos</a></li>
                         @if(isset($usuario))
-                            <li class="menu-item"><a class="menu-link" href="{{route('projeto.criar')}}">Criar Projeto</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Criar Projeto</a></li>
                         @else
-                            <li class="menu-item"><a class="menu-link" href="{{route('site.login')}}">Criar Projeto</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Criar Projeto</a></li>
                         @endif
-                        <li class="menu-item"><a class="menu-link" href="{{route('contato')}}">Contato</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Contato</a></li>
                     </ul>
                     <!--  navigation menu -->
                 </div>
@@ -115,20 +115,19 @@
                                     <li><a href="{{route('usuario.index')}}"><svg class="crumina-icon">
                                                 <use xlink:href="#user-icon"></use>
                                             </svg>Perfil</a></li>
-                                    <li><a href="{{route('projeto.criar')}}"><svg class="crumina-icon">
+                                    <li><a href="#"><svg class="crumina-icon">
                                         <use xlink:href="#picture-icon"></use>
                                     </svg>Criar Projeto</a></li>
-                                    <li><a href="{{  route('meus_projetos', $usuario['id'])}}"><svg class="crumina-icon">
-                                    <!-- <li><a href="{{route('usuario.projetos')}}"><svg class="crumina-icon"> -->
+                                    <li><a href="#"><svg class="crumina-icon">
                                                 <use xlink:href="#dashboard-icon"></use>
                                             </svg>Meus Projetos</a></li>
-                                    <li><a href="{{  route('meus_investimentos', $usuario['id'])}}"><svg class="crumina-icon">
+                                    <li><a href="#"><svg class="crumina-icon">
                                                 <use xlink:href="#dollar-icon"></use>
                                             </svg>Meus Investimentos</a></li>
-                                    <li><a href="{{ route('usuario.carteira') }}"><svg class="crumina-icon">
+                                    <li><a href="#"><svg class="crumina-icon">
                                                 <use xlink:href="#wallet-icon"></use>
                                             </svg>Minha Carteira</a></li>
-                                    <li class="logout"><a href="{{route('gestao_logout')}}"><svg class="crumina-icon">
+                                    <li class="logout"><a href="#"><svg class="crumina-icon">
                                                 <use xlink:href="#logout-icon"></use>
                                             </svg>Sair</a></li>
                                 </ul>

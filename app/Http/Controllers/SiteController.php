@@ -144,7 +144,7 @@ class SiteController extends Controller
 
         ]);
 
-        return view('site.login');
+        return view('login_site');
     }
 
 }

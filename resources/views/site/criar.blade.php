@@ -1,4 +1,5 @@
-@include('site.layouts.header')
+@include('painel.layout.header-site')
+
         <!-- main content area -->
         <div class="primary-content-area container content-padding grid-small-sidebar-left">
             <aside>
@@ -73,4 +74,5 @@
             </div>
 
         </div>
-@include('site.layouts.footer')
+
+        @include('painel.layout.footer-site')
