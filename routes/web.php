@@ -20,14 +20,17 @@ Route::get('/nft/show/{id?}', [ProductController::class, 'show'])->name('ntf.sho
 //Tela de Login do Internauta
 Route::get('/login_internauta', [SiteController::class, 'login'])->name('login_site');
 Route::post('/logar', [SiteController::class, 'store'])->name('logar');
+Route::get('/cadastro', [SiteController::class,'cadastro'])->name('site.cadastro');
+Route::post('/cadastro', [SiteController::class,'cadastroStore'])->name('cadastro.store');
 
 Route::middleware('auth')->group(function () {
 
     Route::get('/usuario-index', [SiteController::class, 'usuario'])->name('usuario.index');
+    
     Route::post('/cadastroEditar', [SiteController::class,'updateCadastro'])->name('cadastro.update');
 
     Route::get('/home_site', [SiteController::class, 'home'])->name('home_site.index');
-    Route::get('/logout_site', [SiteController::class, 'logout_site'])->name('logout_site');
+    Route::get('/logout_site', [SiteController::class, 'logout'])->name('logout_site');
 
     Route::get('/ranking', [SiteController::class, 'ranking'])->name('ranking');
     Route::get('/entregas_user', [SiteController::class, 'entregas_user'])->name('entregas_user');

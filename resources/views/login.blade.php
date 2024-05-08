@@ -21,7 +21,8 @@
                         </div>
                     </div>
                     <button type="submit" class="submit-bttn tk-lp-button tk-lp-button--dark tk-lp-w-full">To enter</button>
-                    <button type="button" class="tk-lp-button tk-lp-button--grey tk-lp-w-full tk-lp-tabs-form-item" data-id="sign-up">Create an Account</button>
+                    <a href="{{route('site.cadastro')}}" type="button" class="tk-lp-button tk-lp-button--grey tk-lp-w-full tk-lp-tabs-form-item">Create an Account</a>
+
                 </form>
             </div>
         </div>
