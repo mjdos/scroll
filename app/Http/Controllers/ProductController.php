@@ -24,8 +24,9 @@ class ProductController extends Controller
         return view('site.index',compact('nfts', 'raridades'));
     }
 
-    public function show(Request $request)
+    public function show(Request $request, $id)
     {
-        return view('site.sales',compact('request'));
+        $nft = Nft::find($id);
+        return view('site.sales',compact('nft'));
     }
 }
