@@ -38,7 +38,7 @@
                     <div class="logo">
                         <a class="logo-link">
                             <div class="logo-img"><img src="{{ url('assets/img/logo-pequeno.png') }}" alt="logo"></div>
-                            <div class="logo-text">Arquivo Nacional</div>
+                            <div class="logo-text">Market Place de NFT</div>
                         </a>
                     </div>
                     <!-- header logo -->
