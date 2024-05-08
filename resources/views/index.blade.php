@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Arquivo Nacional</title>
+    <title>Market Place de NFT</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,7 +44,7 @@
                     </svg></div>
                 <div class="stat-info">
                     <div class="stat-number">Desafio Conexão Cidadã</div>
-                    <div class="stat-description">Ajude a moldar o futuro da documentação do Arquivo Nacional, participe e ganhe NFT exclusivos como recompensa.
+                    <div class="stat-description">Ajude a moldar o futuro da documentação do Market Place de NFT, participe e ganhe NFT exclusivos como recompensa.
 
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                         <use xlink:href="#dollar-icon"></use>
                     </svg></div>
                 <div class="stat-info">
-                    <div class="stat-number">Marketplace Arquivo Nacional</div>
+                    <div class="stat-number">Marketplace Market Place de NFT</div>
                     <div class="stat-description">Explore o nosso Marketplace de NFT, repleto de itens e coleções exclusivas, Compre, Troque e Venda.
 
                     </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Nft;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
@@ -93,4 +94,40 @@ class SiteController extends Controller
         }
         return view('site.usuario.index');
     }
+
+    public function nftCriar(Request $request)
+    {
+
+       $user = $request->user(); 
+
+        $nfts = Nft::all();
+
+        return view('site.criar', compact('nfts'));
+    }
+
+    public function nftStore(Request $request)
+    {
+
+        // dd($request->all());
+        if ($request->file('imagem')->isValid()) {
+            $path = $request->file('imagem')->store('public/imagemProjetos');
+            $path = explode('public/', $path);
+            $imagem_1 =  'storage/'.$path[1];
+        } 
+
+        $usuario = Session::get('usuario');
+        Nft::create([
+            // 'autor_id' =>$usuario['id'],
+            'autor_id' =>1,
+            'nome' =>$request->nome,
+            'rarity_id' => $request->rarity_id,
+            'qtd_mx_mint'=>$request->qtd_mx_mint,
+            'imagem'=>$imagem_1,
+        ]);
+
+        return redirect()->route('home_site.index');
+
+    }
+
+
 }

@@ -20,6 +20,9 @@ Route::get('/nft/show/{id?}', [ProductController::class, 'show'])->name('ntf.sho
 //Tela de Login do Internauta
 Route::get('/login_internauta', [SiteController::class, 'login'])->name('login_site');
 Route::post('/logar', [SiteController::class, 'store'])->name('logar');
+Route::get('/nft_index', [SiteController::class, 'nftCriar'])->name('nft.criar');
+Route::post('/nft_criar', [SiteController::class, 'nftStore'])->name('nft.Store');
+
 
 
 
@@ -35,4 +38,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/ranking', [SiteController::class, 'ranking'])->name('ranking');
     Route::get('/entregas_user', [SiteController::class, 'entregas_user'])->name('entregas_user');
     Route::get('/categorizar', [SiteController::class, 'categorizar'])->name('categorizar');
+
+    // Route::get('/nft_index', [SiteController::class, 'nftCriar'])->name('nft.criar');
+    // Route::post('/nft_criar', [SiteController::class, 'nftStore'])->name('nft.Store');
+
 });
+
+
+//criar
+// Route::post('/projeto-criar', [SiteController::class, 'projetoStore'])->name('projeto.store');

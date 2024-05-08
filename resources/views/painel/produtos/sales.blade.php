@@ -245,10 +245,7 @@
         </div>
         <aside>
             <div class="product-additional-info">
-                <div class="product-fav-counter"><svg class="crumina-icon">
-                        <use xlink:href="#heart-icon"></use>
-                    </svg><span class="count">105</span>
-                </div>
+              
                 <div class="product-purchase-info">
                     <form class="cryptoki-form" id="purchase-form">
                         <div class="product-price">
@@ -273,7 +270,6 @@
                         </div>
                         <button class="btn btn-fullwidth  gradient-background" type="submit">Buy
                             Now!</button>
-                        <button class="btn btn-fullwidth  btn-dark" type="submit">Add to Cart</button>
                     </form>
                 </div>
                 <div class="product-score">
@@ -292,68 +288,12 @@
                         <ul class="details-title">
                             <li>Published</li>
                             <li>Updated</li>
-                            <li>Files included</li>
-                            <li>Software</li>
-                            <li>Size</li>
-                            <li>Tags</li>
+                           
                         </ul>
                         <ul class="details-value">
                             <li>March 26th, 2021</li>
                             <li>May 9th, 2021</li>
-                            <li>PSD, PNG</li>
-                            <li>Photoshop CS6</li>
-                            <li>12MB</li>
-                            <li class="tags-list"><span class="colored"><a href="#">social</a></span>, <span
-                                    class="colored"><a href="#">twitter</a></span>, <span class="colored"><a
-                                        href="#">header</a></span>,
-                                <span class="colored"><a href="#">banner</a></span>, <span class="colored"><a
-                                        href="#">gaming</a></span>, <span class="colored"><a
-                                        href="#">streamer</a></span>,
-                                <span class="colored"><a href="#">gamer</a></span>, <span class="colored"><a
-                                        href="#">live</a></span>
-                            </li>
                         </ul>
-                    </div>
-                </div>
-                <div class="seller-info">
-                    <div class="small-title">Item Seller</div>
-                    <div class="seller-box">
-                        <div class="avatar box-64">
-                            <a href="06-profile-page.html">
-                                <img src="img/avatar.png" alt="avatar"><span class="verified"><svg
-                                        class="crumina-icon">
-                                        <use xlink:href="#check-icon"></use>
-                                    </svg></span></a>
-                        </div>
-                        <div class="seller-meta">
-                            <div class="seller-name">
-                                <div class="name"><a href="06-profile-page.html">Dexter Stark</a></div>
-                                <div class="meta gradient-text">@dexterstark</div>
-                            </div>
-                            <ul class="social-icons-list">
-                                <li class="social-icon icon-border"><a href="#"><svg class="crumina-icon">
-                                            <use xlink:href="#link-icon"></use>
-                                        </svg></a></li>
-                                <li class="social-icon icon-border"><a href="#"><svg class="crumina-icon">
-                                            <use xlink:href="#facebook-icon"></use>
-                                        </svg></a></li>
-                                <li class="social-icon icon-border"><a href="#"><svg class="crumina-icon">
-                                            <use xlink:href="#twitter-icon"></use>
-                                        </svg></a></li>
-                                <li class="social-icon icon-border"><a href="#"><svg class="crumina-icon">
-                                            <use xlink:href="#instagram-icon"></use>
-                                        </svg></a></li>
-                                <li class="social-icon icon-border"><a href="#"><svg class="crumina-icon">
-                                            <use xlink:href="#twitch-icon"></use>
-                                        </svg></a></li>
-                            </ul>
-                            <div class="seller-buttons">
-                                <a class="btn  btn-small-wide gradient-background"
-                                    href="06-profile-page.html">Profile</a>
-                                <a class="btn  btn-small-wide btn-dark" href="#">Follow</a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -362,3 +302,4 @@
     <!-- main content area -->
 
 @include('painel.layout.footer-site')
+<script defer src="{{url('assets/js/main.js')}}"></script>
