@@ -19,33 +19,37 @@
                     <table class="content-table">
                         <thead>
                             <tr>
-                                <th scope="col" class="heading-label">Date</th>
-                                <th scope="col" class="heading-label">Item details</th>
-                                <th scope="col" class="heading-label">Type</th>
+                                <th scope="col" class="heading-label" align="center" style="width: 120px">NFT</th>
+                                <th scope="col" class="heading-label" align="center">Date</th>
+                                <th scope="col" class="heading-label">Name</th>
+                                <th scope="col" class="heading-label">Rarity</th>
                                 <th scope="col" class="heading-label">Price</th>
-                                <th scope="col" class="heading-label">Fee</th>
-                                <th scope="col" class="heading-label">Tax</th>
-                                <th scope="col" class="heading-label">Earnings</th>
+                                <th scope="col" class="heading-label">View</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-label="Date">
-                                    <div class="date">Jul 17, 2021</div>
-                                </td>
-                                <td data-label="Item details">
-                                    <div class="item-title gradient-text"><a href="05-product.html">Cryptoki NFT
-                                            and Digital Market PSD Template</a>
-                                    </div>
-                                    <div class="license-details">Regular License - Invoice CRKT12354</div>
-                                </td>
-                                <td data-label="type" class="stat-value">Sale</td>
-                                <td data-label="price" class="stat-value">$12.00</td>
-                                <td data-label="fee" class="stat-value">-$1.00</td>
-                                <td data-label="tax" class="stat-value">-$1.00</td>
-                                <td data-label="earnings" class="green stat-value">$10.00</td>
-                            </tr>
-                            
+                            @foreach ($nfts as $nft)
+                                
+                                <tr>
+                                    <td data-label="NFT"  align="center">
+                                        <img src="{{ url($nft->imagem) }}" style="width: 100px; height: 100px">
+                                    </td>
+                                    <td data-label="Date" align="center">
+                                        <div class="date">{{ $nft->created_at->format('d/m/Y') }}</div>
+                                    </td>
+                                    <td data-label="Item details">
+                                        <div class="item-title gradient-text">{{ $nft->nome }}</div>
+                                    </td>
+                                    <td data-label="type" class="stat-value">{{ $nft->raridade()->first()->nome }}</td>
+                                    <td data-label="price" class="stat-value">{{ $nft->value }} ETH</td>
+                                    <td data-label="earnings" class="green stat-value">
+                                        <div class="header-user-profile cryptoki-notif-bttn">
+                                            <a class="btn btn-dark" style="width: 80px; text-align:center; padding: 5px" href="{{route('login_site')}}">View</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

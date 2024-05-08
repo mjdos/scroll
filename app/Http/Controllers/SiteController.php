@@ -65,7 +65,10 @@ class SiteController extends Controller
     }
     public function home()
     {
-        return view('site.auth.meu-nft');
+        $usuario    = Session::get('usuario');
+        $user_id    = $usuario['id'];
+        $nfts       = Nft::where('autor_id', '=', $user_id)->get();
+        return view('site.auth.meu-nft',compact('nfts'));
     }
     public function ranking()
     {

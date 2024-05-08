@@ -25,4 +25,8 @@ class Nft extends Model
     {
         return $this->belongsTo(User::class, 'autor_id');
     }
+    public function raridade()
+    {
+        return $this->belongsTo(Rarity::class, 'rarity_id');
+    }
 }
