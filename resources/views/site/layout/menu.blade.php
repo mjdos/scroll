@@ -4,7 +4,8 @@
                 <div class="user-header-user-profile">
                     <div class="avatar box-64">
                         <a href="{{route('usuario.index')}}">
-                            <img src="{{ url('assets/img/avatar.png') }}" alt="avatar"></a>
+                            <img src="{{ url('assets/img/avatar.png') }}" alt="avatar">
+                        </a>
                     </div>
                     <div class="title"><a href="{{route('usuario.index')}}">{{$usuario['nome'] ?? ''}}</a></div>
                     <div class="item-meta"><span class="gradient-text">{{$usuario['email'] ?? ''}}</span></div>
@@ -22,7 +23,7 @@
                     </li>
                     <li><a href="{{route('home_site.index')}}"><svg class="crumina-icon">
                                 <use xlink:href="#wallet-icon"></use>
-                        </svg>My NFT</a>
+                        </svg>My Collection</a>
                     </li>
                     <li>
                         <a href="{{route('nft.criar')}}">

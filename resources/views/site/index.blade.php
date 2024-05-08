@@ -129,10 +129,10 @@
                                     <div class="title">
                                         <a href="{{ route('ntf.show',$nft->id) }}">{{ $nft->nome }}</a>
                                     </div>
-                                    <div class="item-price" style="font-size: 20px;">0.05 BNB</div>
+                                    <div class="item-price" style="font-size: 20px;">{{ $nft->value }} ETH</div>
                                 </div>
                             </div>
-                            <div class="featured-item-post-content" align="center">
+                            <div class="featured-item-post-content">
                                 <div class="social-share-box">
                                     <div class="share-icons" >
 

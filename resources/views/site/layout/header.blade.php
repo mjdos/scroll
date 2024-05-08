@@ -110,7 +110,7 @@
                                     </li>
                                     <li><a href="{{route('home_site.index')}}"><svg class="crumina-icon">
                                                 <use xlink:href="#wallet-icon"></use>
-                                        </svg>My NFT</a>
+                                        </svg>My Collection</a>
                                     </li>
                                     <li>
                                         <a href="{{route('nft.criar')}}">

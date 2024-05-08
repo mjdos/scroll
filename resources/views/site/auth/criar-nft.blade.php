@@ -16,7 +16,7 @@
                 @csrf
                         <div class="form-group">
                             <div class="form-field">
-                                <label for="item-name">Item name</label>
+                                <label for="item-name">NFT name</label>
                                 <input type="text" name="nome">
                             </div>
                             <div class="form-field">
@@ -37,6 +37,12 @@
                                 <input type="text" name="value">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="form-field">
+                                <label for="item-name">Description</label>
+                                <textarea name="description" rows="10"></textarea>
+                            </div>
+                        </div>  
                         <div class="form-group">
                             <div class="form-field">                        
                                 <div class="upload-container">

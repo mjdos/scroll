@@ -116,6 +116,7 @@ class SiteController extends Controller
             'rarity_id'     => $request->rarity_id,
             'qtd_mx_mint'   => $request->qtd_mx_mint,
             'value'         => $request->value,
+            'description'   => $request->description,
             'imagem'        => $imagem_1,
         ]);
 

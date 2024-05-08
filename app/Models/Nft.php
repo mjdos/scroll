@@ -15,6 +15,7 @@ class Nft extends Model
         
         'autor_id',
         'nome',
+        'description',
         'rarity_id',
         'qtd_mx_mint',
         'value',
