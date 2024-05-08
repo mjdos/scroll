@@ -55,12 +55,32 @@
                     <!--  navigation menu -->
                     <ul class="navigation-menu">
                         <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Home</a></li>
-                        <li class="menu-item"><a class="menu-link" href="{{route('ranking')}}">Ranking</a></li>
                         <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Market Place</a></li>
                         <li class="menu-item"><a class="menu-link" href="{{route('nft.criar')}}">Create NFT</a></li>
                     </ul>
                     <!--  navigation menu -->
                 </div>
+                <!--mobile menu bottom panel-->
+        
+                <ul class="social-icons-list">
+                <li class="social-icon"><a href="#"><svg class="crumina-icon">
+                        <use xlink:href="#facebook-icon"></use>
+                    </svg></a></li>
+                <li class="social-icon"><a href="#"><svg class="crumina-icon">
+                        <use xlink:href="#twitter-icon"></use>
+                    </svg></a></li>
+                <li class="social-icon"><a href="#"><svg class="crumina-icon">
+                        <use xlink:href="#instagram-icon"></use>
+                    </svg></a></li>
+                <li class="social-icon"><a href="#"><svg class="crumina-icon">
+                        <use xlink:href="#twitch-icon"></use>
+                    </svg></a></li>
+                <li class="social-icon"><a href="#"><svg class="crumina-icon">
+                        <use xlink:href="#discord-icon"></use>
+                    </svg></a></li>
+                </ul>
+        
+            <!--/mobbile menu bottom panel-->
                 <div class="nav-right-hand-part">
                     
                     @if(isset($usuario))
