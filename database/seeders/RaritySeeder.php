@@ -11,18 +11,8 @@ class RaritySeeder extends Seeder
 {
     public function run(): void
     {
-        Rarity::create([
-            'nome'      => 'Super rare',
-            
-        ]);
-
-        Rarity::create([
-            'nome'      => 'rare',
-            
-        ]);
-        Rarity::create([
-            'nome'      => 'commom',
-            
-        ]);
+        Rarity::create(['nome' => 'SUPER RARE']);
+        Rarity::create(['nome' => 'RARE']);
+        Rarity::create(['nome' => 'COMMON']);
     }
 }

@@ -12,14 +12,6 @@ use Illuminate\Support\Facades\Auth;
 class SiteController extends Controller
 {
 
-    public function index()
-    {
-        return view('index');
-    }
-    public function entregas_user()
-    {
-        return view('entregas');
-    }
     public function login()
     {
         return view('site.login');
