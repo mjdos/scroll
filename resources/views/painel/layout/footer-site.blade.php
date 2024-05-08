@@ -55,7 +55,7 @@
                 <!--  copyright section -->
                 <div class="footer-copyright flex-space-between">
                     <span class="copyright-text">
-                        CriptoMeta 2024 - Todos Direitos Reservados
+                        CriptoMeta 2024 - All Rights Reserved
                     </span>
                 </div>
                 <!--  copyright section -->
@@ -73,6 +73,7 @@
         <script defer src="js/waves.min.js"></script>
         <script async src="js/svg-loader.js"></script>
         <script defer src="js/nice-select2.js"></script>
+        
 
         </body>
 

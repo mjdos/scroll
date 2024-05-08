@@ -11,7 +11,7 @@
     <meta NAME="robots" CONTENT="index, nofollow, noarchive">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <title>Painel de Controle - Arquivo Nacional</title>
+    <title>Painel de Controle - Market Place de NFT</title>
     <link href="{{ url ('painel/dist/css/style.min.css') }}" rel="stylesheet">
 
 </head>
