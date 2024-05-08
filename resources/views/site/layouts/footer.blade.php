@@ -5,7 +5,7 @@
         <footer class="footer footer-margin">
             <div class="footer-wrapper container">
 
-                <div class="footer-content">
+                <div class="footer-content" style="padding-top: 20px !important; padding-bottom: 20px !important;">
                     <div class="footer-row flex-space-between align-items-center">
                         <div class="logo">
                             <a class="logo-link" href="01-home-ds.html">

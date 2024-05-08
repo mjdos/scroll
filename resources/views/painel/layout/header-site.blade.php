@@ -47,7 +47,7 @@
             <div class="navigation-wrapper container flex-space-between align-items-center">
                 <div class="nav-left-hand-part">
                     <div class="logo">
-                        <a class="logo-link" href="{{-- route('site.index') --}}">
+                        <a class="logo-link" href="#">
                             <div class="logo-img"><img src="{{ url('assets/img/logo.png') }}" alt="logo"></div>
                             <div class="logo-text">CriptoMeta</div>
                         </a>

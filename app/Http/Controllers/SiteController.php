@@ -129,5 +129,22 @@ class SiteController extends Controller
 
     }
 
+    public function cadastro()
+    {
+        return view('cadastro');
+    }
+
+    public function cadastroStore(Request $request)
+    {
+
+        User::create([
+            'name'          => $request->usuario,
+            'email'         => $request->email,
+            'password'      => bcrypt($request->senha),
+
+        ]);
+
+        return view('login_site');
+    }
 
 }
