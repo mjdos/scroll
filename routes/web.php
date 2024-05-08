@@ -36,6 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/entregas_user', [SiteController::class, 'entregas_user'])->name('entregas_user');
     Route::get('/categorizar', [SiteController::class, 'categorizar'])->name('categorizar');
 
+    // NFT
     Route::get('/nft_index', [SiteController::class, 'nftCriar'])->name('nft.criar');
     Route::post('/nft_criar', [SiteController::class, 'nftStore'])->name('nft.Store');
 

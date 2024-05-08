@@ -57,7 +57,7 @@
                         <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Home</a></li>
                         <li class="menu-item"><a class="menu-link" href="{{route('ranking')}}">Ranking</a></li>
                         <li class="menu-item"><a class="menu-link" href="{{route('ntf.index')}}">Market Place</a></li>
-                        <li class="menu-item"><a class="menu-link" href="{{route('home_site.index')}}">Create NFT</a></li>
+                        <li class="menu-item"><a class="menu-link" href="{{route('nft.criar')}}">Create NFT</a></li>
                     </ul>
                     <!--  navigation menu -->
                 </div>
@@ -89,7 +89,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="{{route('nft.criar')}}">
                                                 <svg class="crumina-icon">
                                                     <use xlink:href="#picture-icon"></use>
                                                 </svg>Create NFT

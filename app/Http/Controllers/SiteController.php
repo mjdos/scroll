@@ -92,7 +92,7 @@ class SiteController extends Controller
 
             $user->update($dados);
         }
-        return view('site.usuario.index');
+        return view('home');
     }
 
     public function nftCriar(Request $request)
@@ -129,22 +129,5 @@ class SiteController extends Controller
 
     }
 
-    public function cadastro()
-    {
-        return view('cadastro');
-    }
-
-    public function cadastroStore(Request $request)
-    {
-
-        User::create([
-            'name'          => $request->usuario,
-            'email'         => $request->email,
-            'password'      => bcrypt($request->senha),
-
-        ]);
-
-        return view('site.login');
-    }
 
 }

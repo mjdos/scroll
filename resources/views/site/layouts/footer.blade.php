@@ -19,15 +19,28 @@
                     <div class="widget-content flex-space-between">
                         <div class="is-two-col-element">
                             <ul class="footer-menu">
-                                <li class="menu-item"><a class="menu-link" href="{{route('home_site.index')}}">Inicial</a>
+                                <li class="menu-item"><a class="menu-link" href="{{route('home.index')}}">Inicial</a>
                                 </li>
                             </ul>
-                            
+                            <ul class="footer-menu">
+                                <li class="menu-item"><a class="menu-link" href="{{route('quemsomos')}}">Quem Somos</a></li>
+                            </ul>
 
-                           
+                            <ul class="footer-menu">
+                                <li class="menu-item"><a class="menu-link" href="{{route('projeto.explorar')}}">Projetos</a></li>
+                            </ul>
 
-                            
-                            
+                            <ul class="footer-menu">
+                                @if(isset($usuario))
+                                <li class="menu-item"><a class="menu-link" href="{{route('projeto.criar')}}">Criar Projeto</a></li>
+                                @else
+                                <li class="menu-item"><a class="menu-link" href="{{route('site.login')}}">Criar Projeto</a></li>
+                                @endif
+                            </ul>
+
+                            <ul class="footer-menu">
+                                <li class="menu-item"><a class="menu-link" href="{{route('contato')}}">Contato</a></li>
+                            </ul>
                         </div>
                     </div>
                     <br>
