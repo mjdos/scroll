@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -71,5 +72,25 @@ class SiteController extends Controller
     public function categorizar(){
         
         return view('categorizar');
+    }
+
+    public function usuario(){
+        return view('usuario');
+    }
+
+    public function updateCadastro(Request $request)
+    {
+        $usuario = Session::get('usuario');
+        $user = User::find($usuario['id']);
+        if($usuario){
+            $dados = [
+
+                'name'          => $request->usuario,
+                'senha'         => bcrypt($request->senha),
+            ];
+
+            $user->update($dados);
+        }
+        return view('site.usuario.index');
     }
 }

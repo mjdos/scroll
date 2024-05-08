@@ -64,15 +64,12 @@
         <!--Footer area-->
         </div>
 
-
-
-        <!-- Add your site or application content here -->
-        <script defer src="js/swiper-bundle.min.js"></script>
-        <script defer src="js/main.js"></script>
-        <script defer src="js/countdown.js"></script>
-        <script defer src="js/waves.min.js"></script>
-        <script async src="js/svg-loader.js"></script>
-        <script defer src="js/nice-select2.js"></script>
+        <script defer src="{{ url('assets/js/waves.min.js')}}"></script>
+        <script defer src="{{ url('assets/js/swiper-bundle.min.js')}}"></script>
+        <script defer src="{{ url('assets/js/main.js')}}"></script>
+        <script defer src="{{ url('assets/js/svg-loader.js')}}"></script>
+        <script defer src="{{ url('assets/js/nice-select2.js')}}"></script>
+        <script defer src="{{ url('assets/js/countdown.js')}}"></script>
 
         </body>
 

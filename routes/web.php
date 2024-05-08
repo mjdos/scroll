@@ -26,6 +26,9 @@ Route::post('/logar', [SiteController::class, 'store'])->name('logar');
 
 Route::middleware('auth')->group(function () {
 
+    Route::get('/usuario-index', [SiteController::class, 'usuario'])->name('usuario.index');
+    Route::post('/cadastroEditar', [SiteController::class,'updateCadastro'])->name('cadastro.update');
+
     Route::get('/home_site', [SiteController::class, 'home'])->name('home_site.index');
     Route::get('/logout_site', [SiteController::class, 'logout_site'])->name('logout_site');
 
