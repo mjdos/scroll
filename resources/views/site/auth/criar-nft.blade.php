@@ -32,6 +32,10 @@
                                 <label for="qtd_mx_mint">Quantity for MINT</label>
                                 <input type="number" name="qtd_mx_mint" value="1">
                             </div>
+                            <div class="form-field">
+                                <label for="item-name">Value (ETH)</label>
+                                <input type="text" name="value">
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="form-field">                        
@@ -41,7 +45,7 @@
                                         <div class="upload-box"><svg class="crumina-icon">
                                                 <use xlink:href="#upload-icon"></use>
                                             </svg>
-                                            <div class="upload-notice"> Max 120MB, PNG, JPEG, MP3, MP4</div>
+                                            <div class="upload-notice"> Max 120MB, PNG, JPEG</div>
                                             <input type="file" name="imagem" class="btn btn-normal btn-dark browse-btn waves-effect waves-button waves-float waves-light"></input>
                                         </div>
                                     </div>

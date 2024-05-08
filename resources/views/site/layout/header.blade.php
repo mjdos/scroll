@@ -13,9 +13,9 @@
     <meta property="og:image" content="">
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('assets/img/logo.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets/img/logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('assets/img/logo.png') }}">
 
     
     <link rel="stylesheet" href="{{ url('assets/css/normalize.css')}}">
@@ -93,7 +93,7 @@
                                 <img src="assets/img/avatar.png" alt="avatar">
                             </div>
                             <div id="profile-dropdown" class="cryptoki-notif-target">
-                                <div class="profile-dropdown-header profile-cover-image"></div>
+                                <div class="profile-dropdown-header"></div>
                                 <div class="profile-dropdown-body">
                                     <div class="profile-heading">
                                         <div class="profile-avatar avatar box-26">
@@ -101,34 +101,31 @@
                                         </div>
                                     </div>
                                     <ul class="profile-menu">
-                                        <li>
-                                            <a href="{{route('usuario.index')}}">
-                                                <svg class="crumina-icon">
-                                                    <use xlink:href="#user-icon"></use>
-                                                </svg>Profile
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('nft.criar')}}">
-                                                <svg class="crumina-icon">
-                                                    <use xlink:href="#picture-icon"></use>
-                                                </svg>Create NFT
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <svg class="crumina-icon">
-                                                    <use xlink:href="#wallet-icon"></use>
-                                                </svg>Minha Carteira
-                                            </a>
-                                        </li>
-                                        <li class="logout">
-                                            <a href="{{ route('logout_site')}}">
-                                                <svg class="crumina-icon">
-                                                    <use xlink:href="#logout-icon"></use>
-                                                </svg>Logout
-                                            </a>
-                                        </li>
+                                    <li>
+                                        <a href="{{route('usuario.index')}}">
+                                            <svg class="crumina-icon">
+                                                <use xlink:href="#user-icon"></use>
+                                            </svg>Profile
+                                        </a>
+                                    </li>
+                                    <li><a href="{{route('home_site.index')}}"><svg class="crumina-icon">
+                                                <use xlink:href="#wallet-icon"></use>
+                                        </svg>My NFT</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('nft.criar')}}">
+                                            <svg class="crumina-icon">
+                                                <use xlink:href="#picture-icon"></use>
+                                            </svg>Create NFT
+                                        </a>
+                                    </li>
+                                    <li class="logout">
+                                        <a href="{{route('logout_site')}}">
+                                            <svg class="crumina-icon">
+                                                <use xlink:href="#logout-icon"></use>
+                                            </svg>Logout
+                                        </a>
+                                    </li>
                                     </ul>
                                 </div>
                             </div>

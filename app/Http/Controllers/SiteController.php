@@ -107,7 +107,6 @@ class SiteController extends Controller
     public function nftStore(Request $request)
     {
 
-        // dd($request->all());
         if ($request->file('imagem')->isValid()) {
             $path = $request->file('imagem')->store('public/imagemProjetos');
             $path = explode('public/', $path);
@@ -115,13 +114,14 @@ class SiteController extends Controller
         } 
 
         $usuario = Session::get('usuario');
+
         Nft::create([
-            // 'autor_id' =>$usuario['id'],
-            'autor_id' =>1,
-            'nome' =>$request->nome,
-            'rarity_id' => $request->rarity_id,
-            'qtd_mx_mint'=>$request->qtd_mx_mint,
-            'imagem'=>$imagem_1,
+            'autor_id'      => $usuario['id'],
+            'nome'          => $request->nome,
+            'rarity_id'     => $request->rarity_id,
+            'qtd_mx_mint'   => $request->qtd_mx_mint,
+            'value'         => $request->value,
+            'imagem'        => $imagem_1,
         ]);
 
         return redirect()->route('home_site.index');

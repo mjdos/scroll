@@ -23,8 +23,8 @@ return new class extends Migration
             ->on('users');
             $table->string("nome");
             $table->integer("qtd_mx_mint");
+            $table->decimal("value");
             $table->string("imagem");
-
             $table->timestamps();
         });
     }

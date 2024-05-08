@@ -17,15 +17,15 @@
                     <br>
                     <div class="widget-content flex-space-between">
                         <div class="is-two-col-element">
+
                             <ul class="footer-menu">
                                 <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Home</a></li>
                             </ul>
                             <ul class="footer-menu">
-                                <li class="menu-item"><a class="menu-link" href="{{route('ranking')}}">Ranking</a></li>
-                            </ul>
-
-                            <ul class="footer-menu">
                                 <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Market Place</a></li>
+                            </ul>
+                            <ul class="footer-menu">
+                                <li class="menu-item"><a class="menu-link" href="{{route('nft.criar')}}">Create NFT</a></li>
                             </ul>
 
                         </div>

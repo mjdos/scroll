@@ -268,6 +268,6 @@
     </div>
 </div>
 <!-- main content area -->
-<br><br>
+
 
 @include('site.layout.footer')
