@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Market Place de NFT</title>
+    <title>CriptoMetaNFT</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -49,14 +49,14 @@
                     <div class="logo">
                         <a class="logo-link" href="#">
                             <div class="logo-img"><img src="{{ url('assets/img/logo.png') }}" alt="logo"></div>
-                            <div class="logo-text">CriptoMeta</div>
+                            <div class="logo-text">CriptoMetaNFT</div>
                         </a>
                     </div>
                     <!--  navigation menu -->
                     <ul class="navigation-menu">
                         <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Home</a></li>
                         <li class="menu-item"><a class="menu-link" href="{{route('ranking')}}">Ranking</a></li>
-                        <li class="menu-item"><a class="menu-link" href="{{route('ntf.index')}}">Market Place</a></li>
+                        <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Market Place</a></li>
                         <li class="menu-item"><a class="menu-link" href="{{route('nft.criar')}}">Create NFT</a></li>
                     </ul>
                     <!--  navigation menu -->

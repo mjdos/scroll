@@ -1,4 +1,4 @@
-@include('painel.layout.header-site')
+@include('site.layout.header')
         <!-- main content area -->
         <div class="primary-content-area section-medium content-padding">
             <div class="extra-small-section">
@@ -20,10 +20,10 @@
                             <a href="#" class="tk-lp-link-lost tk-lp-tabs-form-item" data-id="lost-password">Forgot password?</a>
                         </div>
                     </div>
-                    <button type="submit" class="submit-bttn tk-lp-button tk-lp-button--dark tk-lp-w-full">To enter</button>
+                    <button type="submit" class="submit-bttn tk-lp-button tk-lp-button--dark tk-lp-w-full">Sign In</button>
                     <a href="{{route('site.cadastro')}}" type="button" class="tk-lp-button tk-lp-button--grey tk-lp-w-full tk-lp-tabs-form-item">Create an Account</a>
 
                 </form>
             </div>
         </div>
-@include('painel.layout.footer-site')
+@include('site.layout.footer')

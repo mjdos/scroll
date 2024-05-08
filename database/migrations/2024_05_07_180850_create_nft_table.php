@@ -22,7 +22,7 @@ return new class extends Migration
             ->references('id')
             ->on('users');
             $table->string("nome");
-            $table->integer("qnt_mx_mint");
+            $table->integer("qtd_mx_mint");
             $table->string("imagem");
 
             $table->timestamps();

@@ -12,18 +12,20 @@ use Illuminate\Support\Facades\Auth;
 class SiteController extends Controller
 {
 
-    public function index(){
+    public function index()
+    {
         return view('index');
     }
-    
-    public function entregas_user(){
+    public function entregas_user()
+    {
         return view('entregas');
     }
-    public function login(){
-        return view('login');
+    public function login()
+    {
+        return view('site.login');
     }
-
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
         Session::flush();
         
@@ -51,8 +53,8 @@ class SiteController extends Controller
         return redirect()->back()->withInput()->withErrors(["Usuário ou Senha Incorretos."]);
 
     }
-
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::guard('web')->logout();
 
         $request->session()->invalidate();
@@ -61,24 +63,23 @@ class SiteController extends Controller
 
         return redirect('/');
     }
-
-    public function home(){
-        return view('home');
+    public function home()
+    {
+        return view('site.auth.meu-nft');
     }
-
-    public function ranking(){
-        
+    public function ranking()
+    {
         return view('ranking');
     }
-    public function categorizar(){
-        
+    public function categorizar()
+    {
         return view('categorizar');
     }
+    public function usuario()
+    {
+        return view('site.auth.perfil');
 
-    public function usuario(){
-        return view('usuario');
     }
-
     public function updateCadastro(Request $request)
     {
         $usuario = Session::get('usuario');
@@ -94,17 +95,15 @@ class SiteController extends Controller
         }
         return view('home');
     }
-
     public function nftCriar(Request $request)
     {
 
-       $user = $request->user(); 
+        $user = $request->user(); 
 
         $nfts = Nft::all();
 
-        return view('site.criar', compact('nfts'));
+        return view('site.auth.criar-nft', compact('nfts'));
     }
-
     public function nftStore(Request $request)
     {
 
@@ -128,12 +127,10 @@ class SiteController extends Controller
         return redirect()->route('home_site.index');
 
     }
-
     public function cadastro()
     {
-        return view('cadastro');
+        return view('site.register');
     }
-
     public function cadastroStore(Request $request)
     {
 
@@ -144,7 +141,7 @@ class SiteController extends Controller
 
         ]);
 
-        return view('login_site');
+        return view('site.login');
     }
 
 }

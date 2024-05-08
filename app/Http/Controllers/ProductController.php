@@ -9,18 +9,18 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('painel.produtos.index');
+        return view('site.index');
     }
 
     public function nft()
     {
         $users = User::all();
-        return view('painel.produtos.index',compact('users'));
+        return view('site.index',compact('users'));
     }
 
     public function show(Request $request)
     {
         
-        return view('painel.produtos.sales',compact('request'));
+        return view('site.sales',compact('request'));
     }
 }

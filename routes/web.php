@@ -7,14 +7,13 @@ use App\Http\Controllers\{
 use Illuminate\Support\Facades\Route;
 
 
-require __DIR__.'/painel.php';
-
+Route::get('/login', [SiteController::class, 'login'])->name('login');
+Route::get('/login_internauta', [SiteController::class, 'login'])->name('login_site');
 
 ///Site
-Route::get('/', [SiteController::class, 'index'])->name('home');
+Route::get('/', [ProductController::class, 'nft'])->name('home');
 
 //Tela dos NFT's
-Route::get('/nft', [ProductController::class, 'nft'])->name('ntf.index');
 Route::get('/nft/show/{id?}', [ProductController::class, 'show'])->name('ntf.show');
 
 //Tela de Login do Internauta
@@ -41,5 +40,3 @@ Route::middleware('auth')->group(function () {
     Route::post('/nft_criar', [SiteController::class, 'nftStore'])->name('nft.Store');
 
 });
-
-

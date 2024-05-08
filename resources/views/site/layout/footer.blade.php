@@ -25,7 +25,7 @@
                             </ul>
 
                             <ul class="footer-menu">
-                                <li class="menu-item"><a class="menu-link" href="{{route('ntf.index')}}">Market Place</a></li>
+                                <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Market Place</a></li>
                             </ul>
 
                         </div>

@@ -1,4 +1,4 @@
-@include('painel.layout.header-site')
+@include('site.layout.header')
 
         <!-- main content area -->
         <div class="primary-content-area bottom-padding-70 ">
@@ -151,4 +151,4 @@
         </div>
         <!-- main content area -->
 
-@include('painel.layout.footer-site')
+@include('site.layout.footer')

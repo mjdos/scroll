@@ -1,14 +1,14 @@
-@include('painel.layout.header-site')
+@include('site.layout.header')
 @php
     $usuario = Session::get('usuario');
 @endphp
 <!-- main content area -->
 <div class="primary-content-area container content-padding grid-left-sidebar">
-    @include('painel.layout.menu_usuario')
+    @include('site.layout.menu')
     <div class="main-content-area">
         <div class="page-title">
             <h2>
-                <span class="gradient-text">Perfil</span>
+                <span class="gradient-text">Profile</span>
             </h2>
         </div>
         <div class="user-db-content-area">
@@ -16,31 +16,27 @@
                 @csrf
                 <div class="form-group">
                     <div class="form-field">
-                        <label>Nome Completo</label>
+                        <label>Name</label>
                         <input type="text" name="usuario" value="{{$usuario['nome'] ?? ''}}">
                     </div>
                     <div class="form-field">
-                        <label>E-mail </label>
+                        <label>E-mail</label>
                         <input type="email" name="email" disabled value="{{$usuario['email'] ?? ''}}">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-field">
-                        <label>Telefone para contato</label>
-                        <input type="number" name="telefone" value="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-field">
-                        <label>Trocar Senha</label>
+                        <label>New Password</label>
                         <input type="password" name="senha" id="password-1">
                     </div>
                     <div class="form-field">
-                        <label>Repetir Senha</label>
+                        <label>Repeat the New Password</label>
                         <input type="password" name="repita_senha" id="password-2">
                     </div>
                 </div>
-                <button class="btn btn-wide btn-dark">Salvar</button>
+                <div align="center">
+                    <button class="btn btn-wide gradient-background" style="width: 150px">Save</button>
+                </div>
             </form>
         </div>
 
@@ -48,4 +44,4 @@
 
 </div>
 <!-- main content area -->
-@include('painel.layout.footer-site')
+@include('site.layout.footer')

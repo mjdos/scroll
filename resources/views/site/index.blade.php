@@ -1,9 +1,9 @@
-@include('painel.layout.header-site')
+@include('site.layout.header')
 <!-- main content area -->
 <div class="primary-content-area content-padding">
     <div class="container section-padding">
         <div class="section-title-wrapper">
-            <div class="section-title"> <span class="gradiente-text">Market Place de NFT</span></div>
+            <div class="section-title"> <span>NFT Market Place</span></div>
         </div>
         <!-- filterable panel -->
         <div class="filterable-bar">
@@ -62,21 +62,23 @@
                                 <div class="item-category ui-templates">
                                     SUPER RARE
                                 </div>
-                                <div class="title"><a href="{{ route('ntf.show','1') }}">Bertha Luz</a>
+                                <div class="title">
+                                    <a href="{{ route('ntf.show','1') }}">Bertha Luz</a>
                                 </div>
+                                <div class="item-price" style="font-size: 20px;">0.05 BNB</div>
                             </div>
                         </div>
-                        <div class="featured-item-post-content">
+                        <div class="featured-item-post-content" align="center">
                             <div class="social-share-box">
-                                <div class="share-icons">
+                                <div class="share-icons" >
 
-                                    <a href="{{ route('ntf.show','1') }}">
+                                    <a class="btn btn-wide gradient-background" style="width: 33% !important;" href="{{ route('ntf.show','1') }}">
                                         View
                                     </a>
 
                                 </div>
                             </div>
-                            <div class="item-price">0.05 BNB</div>
+                            
                         </div>
                     </div>
                 </div>
@@ -202,4 +204,4 @@
 <!-- main content area -->
 <br><br>
 
-@include('painel.layout.footer-site')
+@include('site.layout.footer')
