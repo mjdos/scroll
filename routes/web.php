@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\{
     SiteController,
-    ProductController
+    ProductController,
+    CommentController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -12,6 +13,10 @@ Route::get('/login_internauta', [SiteController::class, 'login'])->name('login_s
 
 ///Site
 Route::get('/', [ProductController::class, 'nft'])->name('home');
+Route::get('/nft/filter',  [ProductController::class, 'filter'])->name('nft.filter');
+Route::post('/nft/{nft}/comment',  [CommentController::class, 'store'])->name('comment.store');
+
+
 
 //Tela dos NFT's
 Route::get('/nft/show/{id?}', [ProductController::class, 'show'])->name('ntf.show');

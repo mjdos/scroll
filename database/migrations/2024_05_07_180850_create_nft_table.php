@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string("nome");
             $table->text("description");
             $table->integer("qtd_mx_mint");
-            $table->decimal("value");
+            $table->decimal('value', 8, 8);
             $table->string("imagem");
             $table->timestamps();
         });

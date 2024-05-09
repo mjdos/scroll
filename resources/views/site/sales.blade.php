@@ -1,14 +1,16 @@
 @include('site.layout.header')
-
-    <!-- main content area -->
-    <div class="primary-content-area container content-padding product-page-ds">
+@php
+$usuario = Session::get('usuario');
+@endphp
+<!-- main content area -->
+<div class="primary-content-area container content-padding product-page-ds">
     <div class="main-content-area product-ds">
         <div class="product-title-section">
             <h2>{{ $nft->nome }}</h2>
             <div class="product-subtitle">
                 <div class="product-author">
                     <span class="avatar box-26"><img src="{{ url('assets/img/avatar.png') }}" alt=""></svg>
-                </span>{{ '@'.$nft->autor()->first()->name }}</div>
+                    </span>{{ '@'.$nft->autor()->first()->name }}</div>
             </div>
         </div>
         <div class="product-image">
@@ -30,19 +32,21 @@
                 </div>
                 <ul class="tabs-list swiper-wrapper">
                     <li class="swiper-slide active"><a href="#tab1">Description</a></li>
-                    <li class="swiper-slide"><a href="#tab2">Comments <span class="count">1</span></a></li>
+                    <li class="swiper-slide"><a href="#tab2">Comments <span class="count">{{count($comments)}}</span></a></li>
                 </ul>
                 <div class="tabs-content-wrapper">
                     <div id="tab1" class="tab active">
                         <div class="tab-content">
                             <div class="product-description">
-                                <p>{{ $nft->nome }}</p>
+                                <h3>{{ $nft->nome }}</h3>
+                                <p>{{ $nft->description }}</p>
                             </div>
                         </div>
                     </div>
                     <div id="tab2" class="tab">
                         <div class="tab-content">
                             <ul class="comments-list">
+                                @foreach($comments as $comment)
                                 <li class="comment-item has-children">
                                     <div class="comment-item-wrapper">
                                         <div class="avatar-block">
@@ -54,45 +58,34 @@
                                             <div class="avatar-meta">
                                                 <div class="avatar-title"><a href="#">Dexter
                                                         Stark</a></div>
-                                                <div class="avatar-meta">@dexterstark</div>
+                                                <div class="avatar-meta">@ {{$comment->nft->autor->name}}</div>
                                             </div>
                                         </div>
                                         <div class="comment-body">
-                                            This NFT is very interesting, can we talk about a discount for purchase?
+                                            <p>{{$comment->content}}</p>
+                                            <p>{{ $comment->created_at->format('d/m/Y') }}</p>
                                         </div>
-                                        <div class="comment-meta">
-                                            <div class="publish-date">2 hours ago</div>
-                                            <div class="reply"><a href="#">Reply</a></div>
-                                        </div>
-                                    </div>
-                                    <ul class="children">
-                                        <li class="comment-item">
-                                            <div class="comment-item-wrapper">
-                                                <div class="avatar-block">
-                                                    <div class="avatar box-42">
-                                                    <a href="#">
-                                                        <img src="{{ url('assets/img/avatar.png') }}" alt="avatar">
-                                                    </a>
-                                                    </div>
-                                                    <div class="avatar-meta">
-                                                        <div class="avatar-title"><a
-                                                                href="#">Jackie
-                                                                Jones</a></div>
-                                                        <div class="avatar-meta">@JackieJ</div>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-body">
-                                                    Yes, of course, send me your phone number.
-                                                </div>
-                                                <div class="comment-meta">
-                                                    <div class="publish-date">46 minutes ago</div>
-                                                    <div class="reply"><a href="#">Reply</a></div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+
+
                                 </li>
+                                @endforeach
                             </ul>
+                            @if(isset($usuario))
+                            <div class="leave-review">
+                                <h5 class="content-heading">Leave a review</h5>
+                                <form class="cryptoki-form" id="comment-form" action="{{ route('comment.store', $nft->id) }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="author_id" value="{{ auth()->id() }}">
+                                    <input type="hidden" name="nft_name" value="{{ $nft->nome }}">
+
+                                    <div class="form-field comment-area">
+                                        <label for="message">Your comment</label>
+                                        <textarea name="message" id="message" class="comment-form" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-normal btn-dark">Post review</button>
+                                </form>
+                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -101,19 +94,21 @@
     </div>
     <aside>
         <div class="product-additional-info">
-            
+
             <div class="product-purchase-info">
                 <form class="cryptoki-form" id="purchase-form">
                     <div class="product-price" style="margin-bottom:1px !important;">
-                        <div><h3>{{ $nft->value }} ETH</h3></div>
+                        <div>
+                            <h3>{{ $nft->value }} ETH</h3>
+                        </div>
                     </div>
                     <div class="pricing-plans">
-                            Rarity
-                            <div class="item-category social-graphics" style="font-size: 15px; text-align:center">
-                                {{ $nft->raridade()->first()->nome }}
-                            </div>
-                        
-                        
+                        Rarity
+                        <div class="item-category social-graphics" style="font-size: 15px; text-align:center">
+                            {{ $nft->raridade()->first()->nome }}
+                        </div>
+
+
                     </div>
                     <button class="btn btn-fullwidth  gradient-background" type="submit">Mint Now!</button>
                 </form>
@@ -134,7 +129,7 @@
                     <ul class="details-title">
                         <li>Published</li>
                         <li>Updated</li>
-                        
+
                     </ul>
                     <ul class="details-value">
                         <li>{{ $nft->created_at->format('d/m/Y') }}</li>
@@ -144,8 +139,8 @@
             </div>
         </div>
     </aside>
-    </div>
-    <!-- main content area -->
+</div>
+<!-- main content area -->
 
 @include('site.layout.footer')
 

@@ -2,69 +2,6 @@
 
 
 <!-- MAIN CONTENT AREA -->
-<div class="primary-content-area bottom-padding-20">
-    <div class="section-padding">
-        <div id="homeSlider" class="swiper">
-            <div class="swiper-wrapper">
-
-                <div id="slide-1" class="swiper-slide">
-                    <picture>
-                        <img src="{{ url('nft_img/slide1.png') }}" width="940" height="640" alt="Slide Image" loading="lazy">
-                    </picture>
-
-                    <div class="dark-overlay"></div>
-                    <div class="slide-content">
-                        <div class="item-info">
-                            <div class="item-bid-section">
-                                <div class="gradient-border_white-bg slide-button"><a class="btn btn-normal" href="#">Go to Item!</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="slide-2" class="swiper-slide">
-                    <picture>
-                        <img src="{{ url('nft_img/slide2.png') }}" width="940" height="640" alt="Slide Image" loading="lazy">
-                    </picture>
-
-                    <div class="dark-overlay"></div>
-                    <div class="slide-content">
-                        <div class="item-info">
-                            <div class="item-bid-section">
-                                <div class="gradient-border-purple-bg slide-button"><a class="btn btn-normal" href="#">Go to Item!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="slide-3" class="swiper-slide">
-                    <picture>
-                        <img src="{{ url('nft_img/slide3.png') }}" width="940" height="640" alt="Slide Image" loading="lazy">
-                    </picture>
-                    <div class="dark-overlay"></div>
-                    <div class="slide-content">
-                        <div class="item-info">
-                            <div class="item-bid-section">
-                                <div class="gradient-border_dark-bg slide-button"><a class="btn btn-normal" href="#">Go to Item!</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="homeslider-nav">
-                <div class="swiper-button-next"><svg class="crumina-icon next-button">
-                        <use xlink:href="#arrow-right2-icon"></use>
-                    </svg></div>
-                <div class="swiper-button-prev"><svg class="crumina-icon prev-button">
-                        <use xlink:href="#arrow-left2-icon"></use>
-                    </svg></div>
-            </div>
-        </div>
-    </div>
-
-</div>
-<!-- MAIN CONTENT AREA -->
 
 
 <!-- main content area -->
@@ -159,6 +96,5 @@
     </div>
 </div>
 <!-- main content area -->
-
 
 @include('site.layout.footer')
