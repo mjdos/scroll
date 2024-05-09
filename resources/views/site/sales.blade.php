@@ -57,7 +57,7 @@ $usuario = Session::get('usuario');
                                             </div>
                                             <div class="avatar-meta">
                                                 <div class="avatar-title"><a href="#">{{$comment->autor->name ?? 'nome de teste' }}</a></div>
-                                                <div class="avatar-meta">@ {{$comment->autor->email ?? 'nome de teste'}}</div>
+                                                <div class="avatar-meta">{{$comment->autor->email ?? 'nome de teste'}}</div>
                                             </div>
                                         </div>
                                         <div class="comment-body">

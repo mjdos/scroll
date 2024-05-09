@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->increments("id");
-            $table->integer('nft_id');
-            $table->foreign('nft_id')->references('id')->on('nft')->onDelete('cascade');
+            $table->integer('nft_id')->unsigned();
+            $table->foreign('nft_id')
+                ->references('id')
+                ->on('nft');
             $table->integer('autor_id')->unsigned();
             $table->foreign('autor_id')
                 ->references('id')
