@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', [SiteController::class, 'login'])->name('login');
 Route::get('/login_internauta', [SiteController::class, 'login'])->name('login_site');
+Route::get('/web3', function() {
+    return view('web3');
+});
 
 ///Site
 Route::get('/', [ProductController::class, 'nft'])->name('home');

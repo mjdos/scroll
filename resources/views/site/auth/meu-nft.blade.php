@@ -16,6 +16,7 @@
         
             <div class="statement-list">
                 <div class="statement">
+                    @if(isset($nfts[0]))
                     <table class="content-table">
                         <thead>
                             <tr>
@@ -62,6 +63,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    @else
+                        <div align="left" style="margin-top: 50px;"><h5>You have not created any NFTs to date.</h5></div>
+                    @endif
                 </div>
             </div>
 

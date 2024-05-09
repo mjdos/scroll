@@ -58,6 +58,7 @@
                         <li class="menu-item"><a class="menu-link" href="{{route('home')}}">Market Place</a></li>
                         <li class="menu-item"><a class="menu-link" href="{{route('nft.criar')}}">Create NFT</a></li>
                     </ul>
+                    
                     <!--  navigation menu -->
                 </div>
                 <!--mobile menu bottom panel-->
@@ -79,7 +80,9 @@
                         <use xlink:href="#discord-icon"></use>
                     </svg></a></li>
                 </ul>
-        
+                <div class="logo" style="margin-left: 80px;">
+                    <img src="{{ url('assets/img/scroll.png') }}" style=" height: 40px" alt="Scroll">
+                </div>
             <!--/mobbile menu bottom panel-->
                 <div class="nav-right-hand-part">
                     
