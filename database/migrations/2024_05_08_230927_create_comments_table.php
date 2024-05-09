@@ -15,6 +15,10 @@ return new class extends Migration
             $table->increments("id");
             $table->integer('nft_id');
             $table->foreign('nft_id')->references('id')->on('nft')->onDelete('cascade');
+            $table->integer('autor_id')->unsigned();
+            $table->foreign('autor_id')
+                ->references('id')
+                ->on('users');
             $table->text('content');
             $table->timestamps();
         });

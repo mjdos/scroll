@@ -11,7 +11,7 @@ class Comment extends Model
     protected $table = 'comments';
 
     protected $fillable = [
-        
+        'autor_id',
         'nft_id',
         'content'
     ];
@@ -19,5 +19,10 @@ class Comment extends Model
     public function nft()
     {
         return $this->belongsTo(Nft::class, 'nft_id');
+    }
+
+    public function autor()
+    {
+        return $this->belongsTo(User::class, 'autor_id');
     }
 }
