@@ -124,7 +124,7 @@
                         <div class="featured-item-content">
                             <div class="featured-item-image">
                                 <a href="{{ route('ntf.show',$nft->id) }}">
-                                    <img src="{{ url($nft->imagem) }}" alt="{{ $nft->nome }}">
+                                    <img src="{{ url($nft->imagem) }}" alt="{{ $nft->nome }}" style="height: 280px">
                                 </a>
                             </div>
                             <div class="featured-item-info">
